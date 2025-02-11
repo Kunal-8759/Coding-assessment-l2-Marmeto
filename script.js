@@ -7,6 +7,15 @@ const input = document.querySelector("#input-id");
 const checkout = document.querySelector(".checkout-button");
 const deleteButton = document.querySelector(".remove-button");
 
+document.addEventListener("DOMContentLoaded", function () {
+    const removeButtons = document.querySelectorAll(".remove-button");
+    removeButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const confirmed = confirm("Remove this item from cart?");   
+        });
+    });
+});
+
 const fetchFromAPi = async () => {
     try {
         const response = await fetch("https://cdn.shopify.com/s/files/1/0883/2188/4479/files/apiCartData.json?v=1728384889");
