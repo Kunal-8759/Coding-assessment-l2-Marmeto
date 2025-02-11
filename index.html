@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marmeto | Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <img src="./images/logo.png" alt="Logo" width="50">
+        <span class="brand-text">Marmeto</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="header-icons">
+        <button class="icon-button" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <button class="icon-button" aria-label="Wishlist">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-.38-.38
+                     a5.5 5.5 0 00-7.78 7.78l8.16 8.16
+                     8.16-8.16a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </button>
+
+        <button class="icon-button" aria-label="Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l.89 4.46a2 2 0 001.96 1.54h11.28
+                     a2 2 0 001.96-1.46l1.38-5.54H6.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Cart</h1>
+      <div class="hero-breadcrumbs">
+        <a href="#">Home</a>
+        <span>/</span>
+        <span>Cart</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container main-content">
+    <div class="cart-grid">
+      <div class="cart-items">
+        <div class="cart-header-row">
+          <div>Product</div>
+          <div>Price</div>
+          <div>Quantity</div>
+          <div>Subtotal</div>
+        </div>
+
+        <div class="cart-item-row">
+          <div class="cart-item-product">
+            
+          </div>
+          <div class="cart-item-price"></div>
+          <div class="cart-item-quantity">
+            <input 
+              type="number" 
+              value="1" 
+              min="1" 
+              class="quantity-input"
+              id="input-id"
+            />
+          </div>
+          <div class="cart-item-subtotal">
+            <span id="subtotal-item-price"></span>
+            <button class="remove-button" aria-label="Remove item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+                   stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon trash-icon">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6l-.867 12.142A2 2 0 0116.138 20H7.862
+                         a2 2 0 01-1.995-1.858L5 6m3 0V4
+                         a2 2 0 012-2h4a2 2 0 012 2v2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-totals">
+        <h2>Cart Totals</h2>
+        <div class="totals-row">
+          <span>Subtotal</span>
+          <span id="cart-total-side"></span>
+        </div>
+        <div class="totals-row">
+          <span>Total</span>
+          <span class="grand-total"></span>
+        </div>
+        <button class="checkout-button">Check Out</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="features-section">
+    <div class="container features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <path d="M4 6h16"></path>
+            <path d="M4 6c-2 0-2 2-2 3s0 3 2 3
+                     c2 0 2-2 2-3S6 6 4 6"></path>
+            <path d="M20 6c2 0 2 2 2 3s0 3-2 3
+                     -2-2-2-3 0-3 2-3"></path>
+            <path d="M8 21h8"></path>
+            <path d="M12 17v4"></path>
+            <path d="M9 6h6v11H9z"></path>
+          </svg>
+        </div>
+        <h3>High Quality</h3>
+        <p>crafted from top materials</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7
+                     c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3>Warranty Protection</h3>
+        <p>Over 2 years</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <path d="M10 17h4V5H2v12h3"></path>
+            <path d="M16 8h2l4 3v6h-3"></path>
+            <circle cx="5" cy="18" r="2"></circle>
+            <circle cx="18" cy="18" r="2"></circle>
+          </svg>
+        </div>
+        <h3>Free Shipping</h3>
+        <p>Order over 150 $</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+               stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+            <path d="M21 15a2 2 0 01-2 2h-1
+                     a2 2 0 01-2-2v-2a2 2 0 012-2h1
+                     a2 2 0 012 2z"></path>
+            <path d="M3 15a2 2 0 002 2h1
+                     a2 2 0 002-2v-2a2 2 0 00-2-2H5
+                     a2 2 0 00-2 2z"></path>
+          </svg>
+        </div>
+        <h3>24 / 7 Support</h3>
+        <p>Dedicated support</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
