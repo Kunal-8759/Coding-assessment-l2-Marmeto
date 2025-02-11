@@ -71,7 +71,7 @@ deleteButton.addEventListener("click", () => {
     sSideTotal.remove();
     total.remove();
     input.remove();
-
+    deleteButton.remove()
     localStorage.removeItem("quantity");
     localStorage.removeItem("totalPrice");
 });
