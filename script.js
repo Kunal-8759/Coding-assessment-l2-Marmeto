@@ -86,6 +86,11 @@ deleteButton.addEventListener("click", () => {
 });
 
 checkout.addEventListener("click", () => {
+    if (!document.querySelector(".cart-item-product")) {
+        alert("No item in the cart");
+        return;
+      }
+      
     alert("Checkout Successful");
 
     localStorage.removeItem("quantity");
