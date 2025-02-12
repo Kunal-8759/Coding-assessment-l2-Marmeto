@@ -65,7 +65,7 @@ img {
 }
 
 .nav-links {
-  display: none; 
+  display: none;
   gap: 2rem;
 }
 
@@ -102,22 +102,26 @@ img {
 
 @media (min-width: 768px) {
   .nav-links {
-    display: flex; 
+    display: flex;
   }
 }
 
 .hero-section {
   position: relative;
   height: 240px;
-  overflow: hidden; /* prevents blurred edges from showing */
+  overflow: hidden;
+  /* prevents blurred edges from showing */
 }
+
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
   background: url("../images/deewar.jpg") center center/cover no-repeat;
-  filter: blur(3px);  /* only this element gets blurred */
-  transform: scale(1.0);  /* optional, to cover any gaps caused by blur */
+  filter: blur(3px);
+  /* only this element gets blurred */
+  transform: scale(1.0);
+  /* optional, to cover any gaps caused by blur */
   z-index: -2;
 }
 
@@ -137,14 +141,18 @@ img {
 .hero-title {
   font-size: 2rem;
   font-weight: bold;
-  margin : 0;
+  margin: 0;
 }
 
 .hero-content-inner {
-  display: flex;           /* enable flex layout */
-  flex-direction: column;  /* stack items vertically */
-  align-items: center;     /* center them horizontally */
-  gap: 0.2rem;             /* spacing between logo and heading */
+  display: flex;
+  /* enable flex layout */
+  flex-direction: column;
+  /* stack items vertically */
+  align-items: center;
+  /* center them horizontally */
+  gap: 0.2rem;
+  /* spacing between logo and heading */
 }
 
 .hero-breadcrumbs {
@@ -198,6 +206,7 @@ img {
   align-items: center;
   border-bottom: 1px solid var(--color-border);
 }
+
 .cart-item-row:last-of-type {
   border-bottom: none;
 }
@@ -301,16 +310,17 @@ img {
 
 .features-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr); /* Large screen: 4 columns */
   gap: 2rem;
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .features-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr; /* Mobile: 1 column (4 rows) */
   }
 }
+
 
 .feature-icon {
   display: flex;
